@@ -8,64 +8,34 @@ namespace Module7
 {
     struct Worker
     {
-        private DateTime tempdate;
-        private int id;
-        private string fio;
-        private int age;
-        private int height;
-        private DateTime birthdate;
-        private string birthcity;
-
         /// <summary>
         /// Текущее время
         /// </summary>
-        public DateTime TempDate
-        {
-            get { return this.tempdate; } set { this.tempdate = value; }
-        }
+        public DateTime Tempdate { get; set; }
         /// <summary>
         /// ID
         /// </summary>
-        public int Id
-        {
-            get { return this.id; } set { this.id = value; }
-        }
+        public int Id { get; set; }
         /// <summary>
         /// ФИО
         /// </summary>
-        public string Fio
-        {
-            get { return this.fio; } set { this.fio = value; }
-        }
+        public string Fio { get; set; }
         /// <summary>
         /// Возраст
         /// </summary>
-        public int Age
-        {
-            get { return this.age; } set { this.age = value; }
-        }
+        public int Age { get; set; }
         /// <summary>
         /// Рост
         /// </summary>
-        public int Height
-        {
-            get { return this.height; } set { this.height = value; }
-        }
+        public int Height { get; set; }
         /// <summary>
         /// Дата рождения
         /// </summary>
-        public DateTime Birthdate
-        {
-            get { return this.birthdate; } set { this.birthdate = value; }
-        }
+        public DateTime Birthdate { get; set; }
         /// <summary>
         /// Город рождения
         /// </summary>
-        public string Birthcity
-        {
-            get { return this.birthcity; }
-            set { this.birthcity = value; }
-        }
+        public string Birthcity { get; set; }
 
         /// <summary>
         /// Создание сотрудника
@@ -80,13 +50,13 @@ namespace Module7
         public Worker(DateTime TempDate, int Id, string FIO, int Age,
                       int Height, DateTime BirthDate, string BirthCity)
         {
-            this.tempdate = TempDate;
-            this.id = Id;
-            this.fio = FIO;
-            this.age = Age;
-            this.height = Height;
-            this.birthdate = BirthDate;
-            this.birthcity = BirthCity;
+            Tempdate = TempDate;
+            this.Id = Id;
+            Fio = FIO;
+            this.Age = Age;
+            this.Height = Height;
+            Birthdate = BirthDate;
+            Birthcity = BirthCity;
         }
 
         /// <summary>
@@ -95,7 +65,8 @@ namespace Module7
         /// <returns>Строка, содержащая данные о сотруднике</returns>
         public string Print()
         {
-            return $"{this.id} {this.tempdate} {this.fio} {this.age} {this.height} {this.birthdate} {this.birthcity}";
+            return $"{this.Id} {this.Tempdate} {this.Fio} {this.Age} " +
+                $"{this.Height} {this.Birthdate} {this.Birthcity}";
         }
     }
 }
